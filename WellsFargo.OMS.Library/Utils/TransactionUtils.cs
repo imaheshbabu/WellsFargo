@@ -19,19 +19,6 @@ namespace WellsFargo.OMS.Library.Utils
                        security = security,
                        portfolio = portfolio
                    };
-            /* return from t in transactions
-                    join s in securities on t.SecurityId equals s.SecurityId into securityJoin
-                    from s in securityJoin.DefaultIfEmpty()
-                    join p in portfolios on t.PortfolioId equals p.PortfolioId into portfolioJoin
-                    from p in portfolioJoin.DefaultIfEmpty()
-                    join c in securities on s.CUSIP equals c.CUSIP into cusipJoin
-                    from c in cusipJoin.DefaultIfEmpty()
-                    select new TransactionDetails
-                    {
-                        transaction = t,
-                        security = s,
-                        portfolio = p
-                    };*/
         }
     }
 }
